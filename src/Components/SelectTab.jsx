@@ -5,7 +5,8 @@ const SelectTab = ({ m, monthChange }) => {
     const month = months[m];
     return (
         //btn btn-primary dropdown-toggle
-        <select className="month-drop-list" onChange={(e) => monthChange(e.target.index)}>
+        <select className="month-drop-list" onChange={(e) => { monthChange(e.target.value); console.log(e.target.value) }
+        }>
 
             {
                 months.map((months, i) =>
@@ -16,7 +17,7 @@ const SelectTab = ({ m, monthChange }) => {
                     </option>
                 )
             }
-        </select>
+        </select >
     )
 }
 export default SelectTab
