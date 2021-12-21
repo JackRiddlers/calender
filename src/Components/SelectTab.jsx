@@ -3,17 +3,15 @@ import React from 'react'
 const SelectTab = ({ m, monthChange }) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const month = months[m];
-    const monthChg = (index) => {
-        monthChange(index);
-    }
     return (
         //btn btn-primary dropdown-toggle
-        <select className="month-drop-list" >
+        <select className="month-drop-list" onChange={(e) => monthChange(e.target.index)}>
 
             {
                 months.map((months, i) =>
                     <option className="drop-opt"
-                        onClick={(eve) => monthChg(eve.target.index)}
+                        value={i}
+                        //onClick={(eve) => { monthChange(eve.target.index); console.log(eve.target.index) }}
                         selected={month === months}>{months}
                     </option>
                 )
