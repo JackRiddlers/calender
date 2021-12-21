@@ -1,11 +1,13 @@
 import React from "react";
 import './App.scss';
-import Content from "./Components/Content";
+import Calender from './Components/Calender'
+
 
 const App = () => {
     return (
-        <div>
-            <Content />
+        <div className="main-container">
+            <h1 >Calender</h1>
+            <Calender />
         </div>
     )
 }

@@ -1,5 +1,63 @@
+@import "~bootstrap/scss/bootstrap";
+
 *,
 *:after,
 *:before {
-  box-sizing: inherit;
+  box-sizing:border-box;
+}
+html{
+  display: flex;
+  margin:5px 120px;
+}
+.selected{
+  background-color: yellow;
+  color: black;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+   .calender-container{
+     margin:0 300px ;
+     display: flex;
+     flex-direction: column;
+     .month-year-container{
+       display: flex;
+       justify-content: space-around;
+       margin:0 0 20px 0;
+       .month-drop-list{
+         color:black;
+       }
+     }
+     table{
+       border-radius: 15px;
+       border-collapse: collapse;
+       background-color: rgb(148, 148, 148);
+      td{
+        &:active{
+          transform: scale(0.9);
+        }
+        user-select: none;
+          border-collapse:collapse ;
+       padding:10px;
+       
+      }
+     }
+     .buttons-container{
+      display: flex;
+      flex-direction: row; 
+      
+      div{
+        margin: 25px;
+        padding:5px 30px;
+      //    background-color: wheat;
+      //    
+      //    
+      //    &:active{
+      //      transform: scale(0.9);
+      //      background-color: rgb(255, 241, 45);
+      //    }
+       }
+     }
+   }
 }
