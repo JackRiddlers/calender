@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SelectTab = ({ m, monthChange }) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -9,6 +9,7 @@ const SelectTab = ({ m, monthChange }) => {
     return (
         //btn btn-primary dropdown-toggle
         <select className="month-drop-list" >
+
             {
                 months.map((months, i) =>
                     <option className="drop-opt"
