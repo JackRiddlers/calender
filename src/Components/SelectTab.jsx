@@ -5,7 +5,7 @@ const SelectTab = ({ m, monthChange }) => {
     const month = months[m];
     return (
         //btn btn-primary dropdown-toggle
-        <select className="month-drop-list  btn btn-primary">
+        <select className="month-drop-list">
             {
                 months.map((months, i) =>
                     <option className="drop-opt"
