@@ -23,7 +23,7 @@ const Calender2 = () => {
         setYear(y);
     }
     const mInc = () => {
-        if (month == 11) {
+        if (month === 11) {
             let y = year + 1;
             setYear(y)
         }
@@ -31,7 +31,7 @@ const Calender2 = () => {
         setMonth(m)
     }
     const mDec = () => {
-        if (month == 0) {
+        if (month === 0) {
             setMonth(11);
             let y = year - 1;
             setYear(y)

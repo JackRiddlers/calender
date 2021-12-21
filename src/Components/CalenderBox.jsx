@@ -11,7 +11,7 @@ const CalenderBox = ({ y, m, d }) => {
     for (let index = 0; index < weekday; index++) {
         days.unshift("");
     }
-    const endDay = getDay(new Date(y, m, daysInMonth));
+
     for (let index = days.length; index < (6 * 7); index++) {
         days.push("-");
     }
@@ -29,19 +29,13 @@ const CalenderBox = ({ y, m, d }) => {
             rows.push(cells);
         }
     });
-    const changling = (i, j) => {
-        let y = 'none';
-        let x = document.getElementsByClassName(y);
-        console.log(x);
-    }
-
     const month = d.getMonth();
     let year = d.getFullYear();
     let daysinmonth = rows.map((days, i) => {
         return (
             <tr>
                 {days.map((desk, j) =>
-                    <td className={date == desk && y == year && m == month ? 'selected' : 'none'}>{desk}</td>
+                    <td className={date === desk && y === year && m === month ? 'selected' : 'none'}>{desk}</td>
                 )
                 }
             </tr >
