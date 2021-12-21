@@ -13,8 +13,7 @@ const Calender = () => {
         setYear(y);
     }
     const monthChange = (monthNow) => {
-        let m = monthNow;
-        setMonth(m);
+        setMonth(monthNow);
     }
     const yInc = () => {
         let y = year + 1;
