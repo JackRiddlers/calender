@@ -4,15 +4,17 @@ import SelectTab from './SelectTab';
 import YearTab from './YearTab';
 import ButtonsTab from './ButtonsTab';
 
-const Calender2 = () => {
+const Calender = () => {
     const date = new Date();
     const [year, setYear] = useState(date.getFullYear());
     const [month, setMonth] = useState(date.getMonth());
     const yearChange = (yearNow) => {
-        setYear(yearNow);
+        let y = yearNow;
+        setYear(y);
     }
     const monthChange = (monthNow) => {
-        setMonth(monthNow);
+        let m = monthNow;
+        setMonth(m);
     }
     const yInc = () => {
         let y = year + 1;
@@ -57,4 +59,4 @@ const Calender2 = () => {
     )
 }
 
-export default Calender2;
+export default Calender
