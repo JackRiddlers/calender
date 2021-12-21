@@ -9,8 +9,9 @@ const SelectTab = ({ m, monthChange }) => {
             {
                 months.map((months, i) =>
                     <option className="drop-opt"
-                        onClick={(eve) => monthChange(i)}
-                        selected={month === months}>{months}</option>
+                        onClick={(eve) => monthChange(eve.target.index)}
+                        selected={month === months}>{months}
+                    </option>
                 )
             }
         </select>
