@@ -8,8 +8,9 @@ const Calender = () => {
     const date = new Date();
     const [year, setYear] = useState(date.getFullYear());
     const [month, setMonth] = useState(date.getMonth());
+    console.log(year);
     const yearChange = (yearNow) => {
-        let y = yearNow;
+        let y = parseInt(yearNow);
         setYear(y);
     }
     const monthChange = (monthNow) => {

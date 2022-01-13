@@ -25,7 +25,7 @@ const CalenderBox = ({ y, m, d }) => {
             cells = []; // empty container 
             cells.push(row); // in current loop we still push current row to new container
         }
-        if (i === days.length - 1) { // when end loop we add remain date
+        if (i === days.length - 1) {
             rows.push(cells);
         }
     });
@@ -35,7 +35,8 @@ const CalenderBox = ({ y, m, d }) => {
         return (
             <tr>
                 {days.map((desk, j) =>
-                    <td className={date === desk && y === year && m === month ? 'selected' : 'none'}>{desk}</td>
+
+                    <td onClick={console.log(5)} className={date === desk && y === year && m === month ? 'selected' : 'none'}><div>{desk}</div></td>
                 )
                 }
             </tr >

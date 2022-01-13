@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 const YearTab = ({ y, Change }) => {
     const [showYearInput, setShowYearInput] = useState(false);
 
@@ -24,8 +22,8 @@ const YearTab = ({ y, Change }) => {
 
     )
 }
-const InputTab = ({ year, change }) => {
-    const [yearNow, setYearInput] = useState(year)
+const InputTab = ({ y, change }) => {
+    const [yearNow, setYearInput] = useState(y)
     return (
         <div>
             <input onChange={(e) => setYearInput(e.target.value)} />
